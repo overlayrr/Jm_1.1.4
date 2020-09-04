@@ -7,6 +7,7 @@ import javax.persistence.Table;
 @Table
 public class User {
     @Id
+    @Column(name = "id")
     private Long id;
 
     @Column
@@ -58,5 +59,15 @@ public class User {
 
     public void setAge(Byte age) {
         this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", age=" + age +
+                '}';
     }
 }
